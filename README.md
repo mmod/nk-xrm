@@ -5,6 +5,14 @@ The Massively Modified, Massively Modern Solution for Node.js which enables the 
 
 ## Getting nk-xrm
 
+*NOTE* This step is optional..you can actually get _and_ install nk-xrm using npm, though it may be a bit buggy at this point:
+```node
+chosen_top_dir/> npm install nk-xrm
+```
+
+It is still suggested to install in the following manner, however:
+
+
 To get started, open terminal/shell/command prompt and browse to the root of where you're building your application.  Clone the nk-xrm repository:
 
 ```
