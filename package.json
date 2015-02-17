@@ -1,7 +1,7 @@
 {
     "name": "nk-xrm",
-    "version": "0.1.0",
-    "description": "The Massively Modified, Massively Modern Solution for Node.js which enables the collection and customization of desired components via a native extension system in order to create an original (X)Cross-Relational Management System. Users can create a CMS, a CRM, or any other application they can imagine by browsing available plug-ins or creating their own.",
+    "version": "0.1.1",
+    "description": "The Massively Modified, Massively Modern Solution for Node.js which enables the collection and customization of desired components via a native extension system in order to create an original (X)Cross-Relational Management System.",
     "main": "index.js",
     "scripts": 
     {
