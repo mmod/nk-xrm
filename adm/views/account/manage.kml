@@ -1,0 +1,125 @@
+                <div class="panel">
+                    <section id="manage">
+                        <h1>[[ pagetitle ]]</h1>
+                        <p></p>
+                        <form action="/account/manage" method="post">
+                            <div class="form-group">
+                                [[ html.label( model.company, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.label( user.company, { "classes": "control-label", "name": "company" } ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.location, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.label( user.location, { "classes": "control-label", "name": "location" } ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.type, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.label( user.type, { "classes": "control-label", "name": "type" } ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.title, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.label( user.title, { "classes": "control-label", "name": "title" } ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.username, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.label( user.username, { "classes": "control-label", "name": "username" } ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.email, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.email, { "classes": "form-control", "name": "email", "placeholder": "i.e. email@address.com" } ) ]]
+                                    [[ html.validationmessage( model.email ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.first, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.name.first, { "classes": "form-control", "name": "first", "placeholder": "i.e. Jane or John" } ) ]]
+                                    [[ html.validationmessage( model.first ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.last, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.name.last, { "classes": "form-control", "name": "last", "placeholder": "i.e. Doe or Deer" } ) ]]
+                                    [[ html.validationmessage( model.last ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.add1, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.address.first, { "classes": "form-control", "name": "add1", "placeholder": "Street number & name" } ) ]]
+                                    [[ html.validationmessage( model.add1 ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.add2, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.address.second, { "classes": "form-control", "name": "add2", "placeholder": "Suite or Apt #" } ) ]]
+                                    [[ html.validationmessage( model.add2 ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.city, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.address.city, { "classes": "form-control", "name": "first", "placeholder": "i.e. Oneonta" } ) ]]
+                                    [[ html.validationmessage( model.city ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.state, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.select( user.address.state, { "classes": "form-control", "name": "userstate" } ) ]]
+                                    [[ html.validationmessage( model.state ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.zip, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.address.zip, { "classes": "form-control", "name": "zip", "placeholder": "i.e. 13820 or 13820-1246" } ) ]]
+                                    [[ html.validationmessage( model.zip ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.phone, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.contact.phone, { "classes": "form-control", "name": "phone", "placeholder": "i.e. 16075555555" } ) ]]
+                                    [[ html.validationmessage( model.phone ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.ext, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.textbox( user.contact.ext, { "classes": "form-control", "name": "ext", "placeholder": "i.e. 1127" } ) ]]
+                                    [[ html.validationmessage( model.ext ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.password, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.password( model.password, { "classes": "form-control" } ) ]]
+                                    [[ html.validationmessage( model.password ) ]]
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                [[ html.label( model.retypepassword, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+                                <div class="col-md-6">
+                                    [[ html.password( model.retypepassword, { "classes": "form-control" } ) ]]
+                                    [[ html.validationmessage( model.retypepassword ) ]]
+                                </div>
+                            </div>
+                            <div class="col-md-offset-8 col-md-4">
+                                <input type="submit" value="Update Account" class="btn btn-default" />
+                            </div>
+                        </form>
+                    </section>
+                </div>
