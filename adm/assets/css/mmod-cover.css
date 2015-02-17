@@ -1,0 +1,46 @@
+html
+ {
+    height: auto;
+    height: 100%;
+    z-index: 0;
+    background-color: rgb(51, 51, 51);
+ }
+ 
+body 
+{
+    margin: 0;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    height: auto;
+    min-height: 100% !important;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 3px;
+    background-color: rgb(51, 51, 51);
+    background-position: 0px 52px !important;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 100px inset;
+    box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 100px inset;
+    display: table;
+}
+
+footer{
+    bottom: 10px;
+    width: 100%;
+    vertical-align: bottom;
+    text-align: center;
+    position: absolute;
+}
+
+.cover-inner
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.panel.panel-inverse
+{
+    background-color: transparent;
+}

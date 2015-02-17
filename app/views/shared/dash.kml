@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[[ title ]]</title>
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/mmod.css" />
+        <link rel="stylesheet" type="text/css" href="/css/mmod-xrm.css" />
+    </head>
+    <body>
+        <div id="mmod-lyte" class="panel lyte">
+            <a class="btn close" onclick="$.mmod.lytebox( \"close\" );">X</a>
+            <div class="content-block">
+            </div>
+        </div>
+
+        <div id="mmod-lytebox" class="lytebox">
+            <div id="mmod-handle-lytebox-drag" class="header-block">
+                <a class="title">MMOD</a>
+                <a class="btn close" onclick="$.mmod.lytebox( \"close\" );">X</a>
+            </div>
+            <div class="content-block">
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nk-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><div class="icon-mmod-badge-small-brand">Massively Modified</div></a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="nk-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/home" class="main-nav-btn dashboard">Dashboard</a></li>
+                        <li><a href="/activities" class="main-nav-btn activities">Activities</a></li>
+                        <li><a href="/reports" class="main-nav-btn reports">Reports</a></li>
+                        <li><a href="/chronicle" class="main-nav-btn chronicle">Logs</a></li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+[[
+    if( authenticated )
+    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, [[ username ]]<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/docs" onclick="$.mmod.view( { ui: 'docs' } );">Documentation</a></li>
+                                <li><a href="/support" onclick="$.mmod.view( { ui: 'support' } );">Support</a>
+                                <li><a href="/preferences" onclick="$.mmod.view( { ui: 'account', act: 'preferences' } );">Preferences</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/account/login" onclick="$.mmod.view( { ui: 'account', act: 'login' } );">Sign Out</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/support">Help</a></li>
+    }
+    else
+    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, [[ username ]]<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/support" onclick="$.mmod.view( { ui: 'support' } );">Help</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/account/login">Sign In</a></li>
+    }
+]]
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+        <div id="isys" class="hidden"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="client-menu" class="col-sm-3 col-md-2 sidebar">
+                    <div class="client-nav-grp dashboard active">
+                        <ul class="nav nav-sidebar">
+                            <li class="client-nav-btn overview active"><a href="#">Overview</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li class="client-nav-btn schedule"><a href="/chronicle/schedule">My Schedule</a></li>
+                            <li class="client-nav-btn chronicle"><a href="/chronicle/timeclock">Time Clock</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li class="client-nav-btn contacts"><a href="/contacts">Contacts</a></li>
+                            <li class="client-nav-btn chat"><a href="#">Chat</a></li>
+                        </ul>
+                    </div>
+                    <div class="client-nav-grp activities">
+                        <ul class="nav nav-sidebar">
+                            <li class="active"><a href="#">Overview</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Create or manage a To-Do List</a></li>
+                            <li><a href="">Start or manage a Project</a></li>
+                            <li><a href="">Schedule or manage a Meeting</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Contacts</a></li>
+                            <li><a href="">Chat</a></li>
+                        </ul>
+                    </div>
+                    <div class="client-nav-grp reports">
+                        <ul class="nav nav-sidebar">
+                            <li class="active"><a href="#">Overview</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Key Performance Indicators</a></li>
+                            <li><a href="">My Project Mintues</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Contacts</a></li>
+                            <li><a href="">Chat</a></li>
+                        </ul>
+                    </div>
+                    <div class="client-nav-grp chronicle">
+                        <ul class="nav nav-sidebar">
+                            <li class="active"><a href="#">Overview</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">View the System Logs</a></li>
+                            <li><a href="">Audit User/System Activity</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Contacts</a></li>
+                            <li><a href="">Chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="client-display" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    [[ 
+                        // You can put comments inside of the subscript blocks and as many spaces and new lines as you wish too.
+                        /* Any kind of comment that is, and it can be a multi-line or single-line style comment */
+                        body
+                        // Comments can also be placed anywhere within the subscript block and they will be stripped properly
+                    ]]
+                </div>
+        </div><!-- container-fluid -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/mmod.js"></script>
+        <script type="text/javascript" src="/js/mmod-ui.js"></script>
+        <script type="text/javascript" src="/js/mmod-xrm-ui.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+html
+{
+    height: auto;
+    height: 100%;
+    z-index: 0;
+}
+ 
+body 
+{
+    margin-top: 52px;
+    position: relative;
+    z-index: 0;
+}
+
+footer
+{
+    text-align: center;
+}
+
+.client-nav-grp{
+    display: none;
+}
+
+.client-nav-grp.active{
+    display: block;
+}
+
+.main-nav-btn{
+    cursor: pointer;
+}
