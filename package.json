@@ -1,6 +1,6 @@
 {
     "name": "nk-xrm",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "The Massively Modified, Massively Modern Solution for Node.js which enables the collection and customization of desired components via a native extension system in order to create an original (X)Cross-Relational Management System.",
     "main": "index.js",
     "scripts": 
@@ -30,10 +30,10 @@
         "xrm"
     ],
     "author": "Richard B. Winters | Massively Modified, Inc. <info@mmogp.com> (http://www.mmogp.com)",
-    "license": "Restricted - See terms of use: <a href=\"mmogp.com/terms\">MMOD End User License Agreement</a>",
+    "license": "Apache V2.0",
     "bugs":
     {
-        "url": "http://mmogp.com/support/report-a-bug"
+        "url": "https://github.com/mmod/nk-xrm/issues"
     },
     "homepage": "http://mmogp.com"
 }
