@@ -1,8 +1,8 @@
 /**
- * package: nk-mvc
+ * package: nk-xrm
  * sub-package: assets
- * version: 0.0.5-alpha
- * author:  Richard B. Winters <a href="mailto:rik@massivelymodified.com">rik At MMOGP</a>
+ * version: 0.1.2
+ * author:  Richard B. Winters <a href="mailto:rik@mmogp.com">rik At MMOGP</a>
  * copyright: 2011-2014 Massively Modified, Inc.
  * license: Apache, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0>
  */

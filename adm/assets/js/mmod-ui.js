@@ -5,8 +5,7 @@
  * @version   $Id$
  * @author    Richard B. Winters http://www.mmogp.com
  * @copyright Copyright (C) 2011 - 2014 Massively Modified, Inc
- *
- * YOU MAY NOT USE THIS WITHOUT EXPLICIT PERMISSION.
+ * @license   Apache v2.0
  */
 
 ( function ( $ )

@@ -3,6 +3,7 @@
  *
  * @author    Richard B Winters http://www.mmogp.com
  * @copyright Copyright (C) 2011 - 2014 Massively Modified, Inc.
+ * @license   Apache v2.0
  */
 
 
