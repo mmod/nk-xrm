@@ -63,14 +63,14 @@ path_to_application/>node whatever.js
 
 The hash function let's you supply a secret that it then hashes; so that you can supply it either with the same string over and over, or by invoking a function that will return a secret from elsewhere, since - being realistic - the more acceptable and professionally practiced way to build a *secure* authentication system is to store secrets and/or encrypt passwords on an external device.  
 
-Take the hashed password printed on your console window / terminal as a result of the console.log (wherever it came from), and add it to the .sql file - replacing the existing `<REPLACEWITHYOURPASSWORDHASH>` values where they are. Update other fields as desired as well.
+Take the hashed password printed on your console window/terminal as a result of the invoked `console.log()` method(wherever it came from), and add it to the `seed.sql` file - replacing the existing `<REPLACEWITHYOURPASSWORDHASH>` values where they are. Update other fields as desired as well.
 
-Run/Execute the contents of the .sql file either in MySQL Workbench, or via your favorite means (in the future nk-mysql will have additional tools which will provide features similar to Microsoft's Migrations, but until then...).  You will also want to browse `path_to_application/app/models/account` and `path_to_application/adm/models/account`, to update the *login* members with the proper salt/secret and/or expand upon the authentication system making it more secure and to your liking. 
+Run/Execute the contents of the `seed.sql` file either in MySQL Workbench, or via your favorite means (in the future nk-mysql will have additional tools which will provide features similar to Microsoft's Migrations, but until then...).  You will also want to browse `path_to_application/app/models/account` and `path_to_application/adm/models/account`, to update the *login* members with the proper salt/secret and/or expand upon the authentication system making it more secure and to your liking. 
 
 
 ### Configure the Application
 
-To finish configuring your application, open the config.js file in the root of the nk-xrm application.  In this file, notice the **url** and **server** members of both the **development** *and* **production** configuration schemas; You probably need to update at least one of them, as well as any mail config (though we can't use it yet, it's there to remind us to build that in!).  If you're developing locally and not using a host entry (meaning you're typing localhost into your browser), then the URL *should* be `http://localhost:XXXX` 'lest you want problems.
+To finish configuring your application, open the `config.js` file in the root of the nk-xrm application.  In this file, notice the **url** and **server** members of both the **development** *and* **production** configuration schemas; You probably need to update at least one of them, as well as any mail config (though we can't use it yet, it's there to remind us to build that in!).  If you're developing locally and not using a host entry (meaning you're typing localhost into your browser), then the URL *should* be `http://localhost:XXXX` 'lest you want problems.
 
 The only other changes you may need to make, are in the database sections of the configuration file.  
 
@@ -113,7 +113,7 @@ Some console output should have alerted you that the application(s) is/are runni
 
 ### Digging Deeper
 
-To get a feel for the XRM and the design of the nk framework, dig through the adm and app folders.  Take note of how the controllers, models, and views are structured and where they are located. This will help you explore and learn about developing with nk.
+To get a feel for the XRM and the design of the nk framework, dig through the `adm` and `app` folders.  Take note of how the controllers, models, and views are structured and where they are located. This will help you explore and learn about developing with nk.
 
 - An example of a website based interface is viewable from the root URL of the xrm application when it is running.
 - An example of a web application 'dash'  is available by visiting `<base_url>/dash`.
@@ -123,7 +123,7 @@ To get a feel for the XRM and the design of the nk framework, dig through the ad
 
 ### Important considerations
 
-The advanced cryptography methods were stripped from this source, so you will want to modify `path_to_application/app/models/account` and `path_to_application/adm/models/account` and updated the *login* members so that they implement a more secure authentication system.
+The advanced cryptography methods were stripped from this source, so you will want to modify `path_to_application/app/models/account` and `path_to_application/adm/models/account` and update the *login* members so that they implement a more secure authentication system.
 
 
 **This is a new repository and we have a lot going on. Please bear with us as we update sources and documentation.**
