@@ -1,5 +1,5 @@
-				<div class="panel">
-				    <section id="accountDetails">
-				    	<h1>[[ pagetitle ]]</h1>
-				    </section>
-				</div>
+                <div class="panel">
+                    <section id="accountDetails">
+                        <h1>[[ pagetitle ]]</h1>
+                    </section>
+                </div>
