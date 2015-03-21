@@ -1,4 +1,4 @@
-# nk-xrm
+# nk-xrm [![Donate via PayPal.com](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8ZCX9RCEQ2DDJ)
 
 The Massively Modified, Massively Modern Solution for Node.js which enables the collection and customization of desired components via a native extension system in order to create an original (X)Cross-Relational Management System. Users can create a CMS, a CRM, or any other application they can imagine by browsing available plug-ins or creating their own.
 
@@ -12,6 +12,7 @@ The Massively Modified, Massively Modern Solution for Node.js which enables the 
 ***NOTES***
 
 - *The package - available on npmjs.org - is an installer package; It fetches a source archive from Github.com and decompresses it to the application root - or the directory containing the __node-modules__ directory.*
+<br />
 - *To use the installer package you will need to have installed __Python v2.7__. You will also need __node-gyp__ installed in the following manner:* `npm install -g node-gyp`.
 - *Because the package on npmjs.org is an __installer__ package - and __not__ the source package; updates to the installer need not take place for each release of nk-xrm. Due to this, you will want to ensure that you check for new releases of nk-xrm from time to time so that you can update your installation when necessary.*
 - *To update nk-xrm via the installer package to the latest source, you should ensure to backup - and will need to remove - any existing source in the chosen application root first. Then run the following:* `chosen_application_root/node_modules/nk-xrm/> node-gyp rebuild`.
@@ -27,19 +28,26 @@ chosen_application_root/> npm install nk-xrm
 You can supply a number of arguments to `npm install nk-xrm` and/or `node-gyp configure` in order to further customize your installation:
 
 - `--remote_url` to override the github.com repository    
-   <sub>i.e. `npm install nk-xrm --remote_url="https://github.com/mmod/archive"`</sub>
+   <sub>i.e. `npm install nk-xrm --remote_url="https://github.com/mmod/archive"`</sub>   
+   
 - `--remote_branch` to override the github.com branch   
-   <sub>i.e. `npm install nk-xrm --remote_branch="master"`</sub>
+   <sub>i.e. `npm install nk-xrm --remote_branch="master"`</sub>   
+   
 - `--archive_name` to override the archive's local name   
-   <sub>i.e. `npm install nk-xrm --archive_name="nk-xrm-latest"`</sub>
+   <sub>i.e. `npm install nk-xrm --archive_name="nk-xrm-latest"`</sub>   
+   
 - `--archive_extension` to override the archive's extension   
-   <sub>i.e. `npmn install nk-xrm --archive_extension=".tar.gz"`</sub>
+   <sub>i.e. `npmn install nk-xrm --archive_extension=".tar.gz"`</sub>   
+   
 - `--archive_destination` to override the archive's local destination   
-   <sub>i.e. `npm install nk-xrm --archive_destination="./"`</sub>
+   <sub>i.e. `npm install nk-xrm --archive_destination="./"`</sub>   
+   
 - `--package_destination` to override the xrm's desination   
-   <sub>i.e. `npm install nk-xrm --package_destination="<(module_root_dir)/../../"`</sub>
+   <sub>i.e. `npm install nk-xrm --package_destination="<(module_root_dir)/../../"`</sub>   
+   
 - `--ignorable_files` to override the list of files to ignore in the source tarball   
-   <sub>i.e. `npm install nk-xrm --ignorable_files=['.project', '.gitignore']`</sub>
+   <sub>i.e. `npm install nk-xrm --ignorable_files=['.project', '.gitignore']`</sub>   
+   
 
 We anticipate that the most used override should be `--remote_branch`. This allows the end user to choose between stable and unstable variants of the xrm package. The examples listed above represent the default values currently set in the installer's source.
 
@@ -221,7 +229,13 @@ More documentation to come.
 <br />
 ## Development
 
-Feel free to fork the repository and submit pull requests.  Documentation for getting the development environment setup is coming soon.
+Feel free to fork the repository and submit pull requests. Browse any of our other repositories as well [MMOD @ Github](http://github.com/mmod). 
+
+Documentation for getting the development environment setup is coming soon.
+
+   <sub>*You may also contribute by making a donation*</sub>   
+   [![Donate via PayPal.com](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8ZCX9RCEQ2DDJ)
+
 
 
 <br />
