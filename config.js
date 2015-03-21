@@ -2,7 +2,7 @@
  * config.js
  *
  * package: nk-xrm
- * version:  0.0.1
+ * version:  0.1.5
  */
 
 var path = require( 'path' ),
