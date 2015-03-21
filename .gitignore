@@ -28,5 +28,9 @@ node_modules
 .lock-wscript
 
 # Tool specific files
-.gitignore~
 .README.md.html
+.*~
+.*.*~
+.project
+.settings
+.pydevproject
